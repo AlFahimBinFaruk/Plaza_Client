@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
-const ColorCircle = ({ color }) => {
+const ColorCircle = ({ color, onClick }) => {
+    color=color.toLowerCase();
     const [selectedColor, setSelectedColor] = useState("");
 
     useEffect(() => {
@@ -27,6 +28,7 @@ const ColorCircle = ({ color }) => {
     border-1 
     border-dark `}
             role="button"
+            onClick={onClick}
         />
     );
 };
